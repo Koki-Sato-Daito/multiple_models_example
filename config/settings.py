@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'coupon.apps.CouponConfig',
     'item.apps.ItemConfig',
 
+    'rest_framework',
     'drf_multiple_model',
 ]
 
