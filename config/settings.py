@@ -43,8 +43,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'app1.apps.App1Config',
-    'app2.apps.App2Config',
+    'coupon.apps.CouponConfig',
+    'item.apps.ItemConfig',
+
+    'drf_multiple_model',
 ]
 
 MIDDLEWARE = [
