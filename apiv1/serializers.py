@@ -1,16 +1,16 @@
 from rest_framework import serializers
 
-from app1.models import App1
-from app2.models import App2
+from coupon.models import Coupon
+from item.models import Item
 
 
-class App1Serializer(serializers.ModelSerializer):
+class CouponSerializer(serializers.ModelSerializer):
     class Meta:
-        model = App1
+        model = Coupon
         fields = '__all__'
 
-   
-class App2Serializer(serializers.ModelSerializer):
+
+class ItemSerializer(serializers.ModelSerializer):
     class Meta:
-        model = App2
+        model = Item
         fields = '__all__'
