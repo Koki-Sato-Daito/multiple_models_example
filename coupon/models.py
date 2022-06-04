@@ -1,9 +1,8 @@
 import datetime
-import pytz
 
 from django.db import models
-
-utc = pytz.UTC
+from django.utils import timezone
+from django.utils.timezone import make_aware
 
 
 class CouponQuerySet(models.QuerySet):
@@ -14,11 +13,12 @@ class CouponQuerySet(models.QuerySet):
 class Coupon(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField()
-    start_time = models.DateTimeField(default=datetime.datetime.min)
-    end_time = models.DateTimeField(default=datetime.datetime.max)
+    start_time = models.DateTimeField(default=make_aware(datetime.datetime.min))
+    end_time = models.DateTimeField(default=make_aware(datetime.datetime.max))
 
     @property
     def is_available(self):
-        return self.start_time < datetime.datetime.now(tz=utc) < self.end_time
+        now = timezone.now()
+        return self.start_time < now < self.end_time
 
     objects = CouponQuerySet.as_manager()
