@@ -1,5 +1,5 @@
 ## 複数モデルをシリアライズするView
-- qiita url
+- https://qiita.com/s17161278/items/c6c7c5f57cb99a5ccd68
 
 ## インストール
 ```
@@ -24,4 +24,4 @@ $ python manage.py loaddata coupons.json
 # サーバ起動
 $ python manage.py runserver
 ```
-- http://localhost:8000/api/items/にアクセスするとレスポンスを確認できます。
+- http://localhost:8000/api/items/ にアクセスするとレスポンスを確認できます。
