@@ -1,0 +1,29 @@
+[
+    {
+        "model": "item.item",
+        "pk": 1,
+        "fields": {
+            "name": "商品A",
+            "price": "1000",
+            "description": "商品Aです。"
+        }
+    },
+    {
+        "model": "item.item",
+        "pk": 2,
+        "fields": {
+            "name": "商品B",
+            "price": "10000",
+            "description": "商品Bです。"
+        }
+    },
+    {
+        "model": "item.item",
+        "pk": 3,
+        "fields": {
+            "name": "商品C",
+            "price": "100000",
+            "description": "商品Cです。"
+        }
+    }
+]

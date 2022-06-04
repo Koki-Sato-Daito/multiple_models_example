@@ -11,12 +11,12 @@ class ItemListAPIView(ObjectMultipleModelAPIView):
     querylist = [
         {
             'queryset': Item.objects.all(),
-            'serializer_class': CouponSerializer,
+            'serializer_class': ItemSerializer,
             'label': 'items',
         },
         {
-            'queryset': Coupon.objects.all(),
-            'serializer_class': ItemSerializer,
+            'queryset': Coupon.objects.available(),
+            'serializer_class': CouponSerializer,
             'label': 'coupons'
         },
     ]

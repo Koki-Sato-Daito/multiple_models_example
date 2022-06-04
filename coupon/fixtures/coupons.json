@@ -1,0 +1,32 @@
+[
+    {
+        "model": "coupon.coupon",
+        "pk": 1,
+        "fields": {
+            "name": "クーポンA",
+            "description": "半額で商品を購入できます。",
+            "start_time": "2015-01-01 13:30",
+            "end_time": "2030-01-01 13:30"
+        }
+    },
+    {
+        "model": "coupon.coupon",
+        "pk": 2,
+        "fields": {
+            "name": "クーポンB",
+            "description": "10%引きで商品を購入できます。",
+            "start_time": "2020-01-01 13:30",
+            "end_time": "2030-01-01 13:30"
+        }
+    },
+    {
+        "model": "coupon.coupon",
+        "pk": 3,
+        "fields": {
+            "name": "クーポンC",
+            "description": "20%引きで商品を購入できます。",
+            "start_time": "2015-01-01 13:30",
+            "end_time": "2020-01-01 13:30"
+        }
+    }
+]
