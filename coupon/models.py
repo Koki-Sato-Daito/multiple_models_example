@@ -5,11 +5,6 @@ from django.utils import timezone
 from django.utils.timezone import make_aware
 
 
-class CouponQuerySet(models.QuerySet):
-    def available(self):
-        return [coupon for coupon in self.all() if coupon.is_available]
-
-
 class Coupon(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField()
@@ -21,4 +16,7 @@ class Coupon(models.Model):
         now = timezone.now()
         return self.start_time < now < self.end_time
 
-    objects = CouponQuerySet.as_manager()
+    # https://forum.djangoproject.com/t/how-to-filter-model-property-in-views/11869/11
+    @classmethod
+    def get_available_coupons(cls):
+        return [coupon for coupon in cls.objects.all() if coupon.is_available]
