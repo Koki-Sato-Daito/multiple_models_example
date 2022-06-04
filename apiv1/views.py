@@ -18,7 +18,7 @@ class ItemListAPIView(ObjectMultipleModelAPIView):
             'queryset': Coupon.objects.all(),
             'serializer_class': CouponSerializer,
             # querysetでavailableをフィルターするとマイグレーションができないため
-            'filter_fn': lambda qs: qs.available(),
+            'filter_fn': lambda qs, _: qs.available(),
             'label': 'coupons'
         },
     ]
